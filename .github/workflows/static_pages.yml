@@ -37,6 +37,11 @@ jobs:
       with:
         path: ./public
 
+    - name: Download a single artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: lanyeby-blog-artifact
+
   deploy:
     needs: build
     permissions:
