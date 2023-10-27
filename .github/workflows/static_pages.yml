@@ -32,8 +32,8 @@ jobs:
     - name: Build
       run: npm run build
   
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v2
       with:
         name: github-pages
         path: ./public
@@ -44,7 +44,7 @@ jobs:
       pages: write
       id-token: write
     environment:
-      name: lanyeby-blog
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
