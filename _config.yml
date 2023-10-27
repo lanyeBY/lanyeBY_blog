@@ -12,6 +12,8 @@ language: zh-CN
 timezone: ''
 
 # URL
+url: https://lanyeby.github.io/lanyeBY_blog
+root: /lanyeBY_blog/
 permalink: :year:month/:title/
 permalink_defaults:
 pretty_urls:
