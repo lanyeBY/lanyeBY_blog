@@ -35,7 +35,7 @@ jobs:
     - name: Upload Pages artifact
       uses: actions/upload-artifact@v2
       with:
-        name: lanyeby-blog
+        name: github-page
         path: ./public
 
   deploy:
@@ -44,7 +44,7 @@ jobs:
       pages: write
       id-token: write
     environment:
-      name: lanyeby-blog
+      name: github-page
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
